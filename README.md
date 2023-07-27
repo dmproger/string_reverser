@@ -5,7 +5,7 @@ Need to impement `<string>.reverse` method in best ways
 
 # Smoke
 
-I think, there are two cool and compact solutions for that (see `lib` folder)
+I think, there are two cool and compact solutions for that (see `lib` folder).
 
 ```ruby
 module StringReverser
@@ -24,7 +24,7 @@ module StringReverser
   # method2 can be more nicely and compact
   #
   def method2_stdout(str)
-    (1..).each { |n| print(str[-n]) }
+    (1..).each { |n| print(str[-n] || raise) }
   rescue
   end
 end
@@ -44,4 +44,4 @@ It's tested. Feel free to grab and add your own solution!
 
 This testcase was given at [Mercury](https://www.mercdev.com) during live codding session.
 
-`method1` was suggested by CTO, `method2` - by me, as cool and compact to.
+`method1` was suggested by CTO, `method2` and `method2_stdout` - by me, as cool and compact to.
