@@ -16,4 +16,11 @@ RSpec.describe StringReverser do
       expect(result).to eq(reversed_string)
     end
   end
+
+  context 'stdout and console printing' do
+    it 'reverses an input string' do
+      expect { described_class.send(:method2_stdout, string) }.
+        to output(reversed_string).to_stdout
+    end
+  end
 end
